@@ -1,0 +1,82 @@
+﻿<Window x:Class="WpfApp5.Views.ForuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5.Views"
+        mc:Ignorable="d"
+        Title="New Order" Height="700" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="5" Background="WhiteSmoke">
+            <Label Template="{DynamicResource myCustomLabel}" FontFamily="Palatino Linotype" Foreground="#01133d" FontWeight="SemiBold" Content="clients" HorizontalAlignment="Left" VerticalContentAlignment="Top" />
+            <Label Template="{DynamicResource myCustomLabel}" FontFamily="Palatino Linotype" Foreground="#01133d" FontWeight="SemiBold" Content="home" HorizontalAlignment="Right" VerticalContentAlignment="Top" />
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Label Template="{DynamicResource myCustomLabel}" Content="Name of the order" Foreground="#01133d" HorizontalAlignment="Left" FontFamily="Palatino Linotype" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+                    <TextBox Panel.ZIndex="1" Margin="5" Height="40" />
+                    <Label Content="Type the order name same with the order blank" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Template="{DynamicResource myCustomLabel}" Content="Order Quantity" Foreground="#01133d" HorizontalAlignment="Left" FontFamily="Palatino Linotype" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+                    <TextBox Panel.ZIndex="1" Margin="5" Height="40" />
+                    <Label Content="How much do you want?" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <Label Template="{DynamicResource myCustomLabel}" Content="Order opening day" Foreground="#01133d" HorizontalAlignment="Left" FontFamily="Palatino Linotype" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+
+                    <Grid HorizontalAlignment="Left">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="33" Width="100"/>
+                        <Label Content="Day" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Center">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="33" Width="100"/>
+                        <Label Content="Month" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="33" Width="100"/>
+                        <Label Content="Year" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Row="3">
+                <Label Template="{DynamicResource myCustomLabel}" Content="Order delivery day" Foreground="#01133d" HorizontalAlignment="Left" FontFamily="Palatino Linotype" FontSize="17" Margin="3" FontWeight="Bold"/>
+                <Grid>
+
+                    <Grid HorizontalAlignment="Left">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="40" Width="100"/>
+                        <Label Content="Day" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Center">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="40" Width="100"/>
+                        <Label Content="Month" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right">
+                        <TextBox Panel.ZIndex="1" Margin="5" Height="40" Width="100"/>
+                        <Label Content="Year" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="LightGray" FontSize="15"/>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+            
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button Grid.Row="2" Template="{DynamicResource myCustomBtn}" Content="Register" Background="#01133d" Height="50" Width="330" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>
